@@ -1,4 +1,6 @@
 # Smaller Folders
+Split an arbitrary number of files into sub-folders containing a specified number of files each.
+
 Turn
 ```
 folder

@@ -1,6 +1,7 @@
 [tool.poetry]
 name = "smaller_folders"
 version = "0.1.0"
+# NOTE this must be kept in sync with README.md
 description = "Split an arbitrary number of files into sub-folders containing a specified number of files each."
 authors = ["Aatif Syed <aatif@aatifsyed.uk>"]
 license = "MIT"
