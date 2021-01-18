@@ -11,6 +11,7 @@ python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.0"
+black = "^20.8b1"
 
 [tool.poetry.scripts]
 smaller_folders = "smaller_folders.cli:main"
