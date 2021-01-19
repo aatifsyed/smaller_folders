@@ -10,3 +10,4 @@ class ProgramConfig:
     files: List[Path]
     number_per_folder: int
     sub_folder_prefix: str
+    sort: bool

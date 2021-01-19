@@ -32,9 +32,7 @@ class ArgumentParser(argparse.ArgumentParser):
             choices=[
                 "debug",
                 "info",
-                "warning",
                 "error",
-                "critical",
             ],
             default="info",
             help="set logging level for this tool",
@@ -64,11 +62,18 @@ class ArgumentParser(argparse.ArgumentParser):
             type=int,
         )
         self.add_argument(
-            "-s",
+            "-p",
             "--sub-folder-prefix",
             help="the subfolders will be named SUB_FOLDER_PREFIX001 and so on. Default is 'smaller_folder'",
             default="smaller_folder",
             type=str,
+        )
+        self.add_argument(
+            "-s",
+            "--sort",
+            action="store_true",
+            default=False,
+            help="naturally (not lexicographically) sort the supplied files",
         )
 
     def parse_args_to_config(self, *args, **kwargs) -> ProgramConfig:
@@ -79,6 +84,7 @@ class ArgumentParser(argparse.ArgumentParser):
             files=args.files,
             number_per_folder=args.number_per_folder,
             sub_folder_prefix=args.sub_folder_prefix,
+            sort=args.sort,
         )
 
 
